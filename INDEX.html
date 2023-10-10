@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" mx-2 my-52">
+
+<div class="mx-auto h-full text-center ">
+    <div class=" font-black text-slate-800 text-2xl my-5">BASIC SHOPPING CART w/ JavaScript</div>
+    <div class="flex-col">
+        <button
+                onclick="cartQuantity++;
+      document.querySelector('#cartSummary').innerText = `You've ${cartQuantity} items in cart, Order Now.`"
+                class="mx-auto my-2 h-11 w-11/12 font-bold max-w-sm justify-center rounded-lg bg-[#c86265] px-3 text-white"
+        >
+            Add Item
+        </button>
+        <br />
+
+        <button
+                onclick="cartQuantity--;
+      document.querySelector('#cartSummary').innerText = `You've ${cartQuantity} items in cart, Order Now.`"
+                class="mx-auto my-2 h-11 w-11/12 font-bold max-w-sm rounded-lg  bg-[#c86265] px-3 text-white"
+        >
+            Delete Item
+        </button>
+        <br />
+
+        <button
+                onclick="cartQuantity = cartQuantity + 2;
+      document.querySelector('#cartSummary').innerText = `You've ${cartQuantity} items in cart, Order Now.`"
+                class="mx-auto my-2 h-11 w-11/12 font-bold max-w-sm rounded-lg bg-[#c86265]  px-3 text-white"
+        >
+            Add 2 Item
+        </button>
+    </div>
+    <p class="my-6 text-center text-slate-800 font-bold uppercase text-lg " id="cartSummary">You've 0 items in cart, Order Now.</p>
+</div>
+
+<script>
+
+    let cartQuantity = 0;
+    document.querySelector('#cartSummary').innerText = `You've ${cartQuantity} items in cart, Order Now.`
+
+
+</script>
+
+</body>
+</html>
